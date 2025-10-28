@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio - Joan Medeiros</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body data-bs-theme="light">
+    <header id="home">
+        <div class="
+            container-header 
+            container-fluid 
+            d-flex 
+            justify-content-around 
+            align-items-center
+            py-3
+            fixed-top
+        ">
+            <a class="navbar-brand gradient-text" href="#">Joan</a>
+            <nav class="navbar navbar-expand-lg">
+                <div class="d-flex justify-content-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav center gap-3">
+                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="#sobre-mim">Sobre</a>
+                            <a class="nav-link" href="#habilidades">Habilidades</a>
+                            <a class="nav-link" href="#projetos">Projetos</a>
+                            <a class="nav-link" href="#contato">Contato</a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <button onclick="toggleTheme()" class="btn btn-outline-info" type="button">
+                <i id="icon-toogle-theme" class="bi bi-brightness-high"></i>
+            </button>
+
+        </div>
+
+        <div class="container-home d-flex flex-column justify-content-center align-items-center py-5">
+            <img src="./assets/avatar.jpg"/>
+            <h1>Joan Medeiros</h1>
+            <h5 class="gradient-text">Analista e Desenvolvedor 🧙‍♂️</h5>
+            <p class="text-center">
+                Olá! Meu nome é Joan Medeiros, sou um desenvolvedor Full Stack apaixonado por criar soluções inovadoras e eficientes. Com experiência em diversas tecnologias, estou sempre em busca de novos desafios para aprimorar minhas habilidades e contribuir para o sucesso dos projetos em que estou envolvido.
+            </p>
+            <a href="#contato" class="gradient-text btn btn-outline-info mt-3">Me contate</a>
+        </div>
+        
+    </header>
+
+    <section id="sobre-mim" class="container-md py-5 d-flex align-items-center">
+        <div class="row gy-4 d-flex justify-content-center align-items-center g-4">
+            <article class="col-md-8 text-center">
+                <h2 class="mb-2 fw-bold">Sobre Mim</h2>
+                <h5 class="gradient-text mb-3">Quem sou eu ?</h5>
+                <p>
+                    Olá! Meu nome é <strong>Joan Medeiros</strong> e sou um 
+                    <em>desenvolvedor full stack</em>. Atualmente, atuo como 
+                    <strong>analista e desenvolvedor de sistemas</strong>, além de colaborar em 
+                    projetos de pesquisa na área de Engenharia de Software. 
+                    Acredito que o aprendizado contínuo é essencial, e por isso estou sempre explorando
+                    novas ferramentas e metodologias que possam aprimorar meu trabalho e impactar positivamente as pessoas.
+                </p>
+                <h5 class="gradient-text mb-3">
+                    <i class="bi bi-mortarboard-fill text-primary me-2"></i>
+                    Formação Acadêmica
+                </h5>
+
+                <ul class="list-unstyled ps-2">
+                    <li class="mb-3">
+                        <strong>Bacharelado em Sistemas de Informação</strong><br>
+                        <span class="text-muted">UFRN — 2020 a 2024</span>
+                    </li>
+                    <li>
+                        <strong>Mestrado Profissional em Tecnologia da Informação (PPGTI)</strong><br>
+                        <span class="text-muted">UFRN — Natal, RN</span>
+                    </li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="habilidades" class="container-md d-flex justify-content-center align-items-center py-5">
+        <div class="container text-center">
+            <h2 class="mb-2">Habilidades Técnicas</h2>
+            <h5 class="gradient-text mb-5">Escolha uma categoria</h5>
+
+           <div class="row g-4 gy-4 px-3 py-4 mb-4">
+                <!-- Linguagens -->
+                <div class="col-md-6 categoria" data-cat="linguagens">
+                    <div class="card border-primary border-3 text-center h-100 btn btn-outline-primary">
+                        <div class="card-body">
+                            <i class="bi bi-code-slash text-primary display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Linguagens</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="col-md-6 categoria" data-cat="frameworks">
+                    <div class="card border-success border-3 text-center h-100 btn btn-outline-success">
+                        <div class="card-body">
+                            <i class="bi bi-layers text-success display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Frameworks</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ferramentas -->
+                <div class="col-md-6 categoria" data-cat="ferramentas">
+                    <div class="card border-warning border-3 border-3 text-center h-100 btn btn-outline-warning">
+                        <div class="card-body">
+                            <i class="bi bi-tools text-warning display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Ferramentas</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="col-md-6 categoria" data-cat="softskills">
+                    <div class="card border-info border-3 text-center h-100 btn btn-outline-info">
+                        <div class="card-body">
+                            <i class="bi bi-people text-info display-5 mb-3"></i>
+                            <h5 class="card-title fw-bold">Soft Skills</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="habilidades-container" class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+
+            </div>
+
+            <button id="limpar-btn" class="btn btn-outline-danger">
+                Limpar
+            </button>
+        </div>
+    </section>
+
+    <section id="projetos" class="container-md d-flex justify-content-center align-items-center">
+        <div class="container">
+            <h2 class="text-center mb-2">Projetos</h2>
+            <h5 class="gradient-text text-center mb-5">Um pouco do meu trabalho </h5>
+            <div class="row gy-4">
+                <!-- Projeto 1 -->
+                <article class="col-md-4 card-project">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./assets/project-1.png" class="card-img-top" alt="Academic Dev Flow">
+                        <div class="card-body">
+                            <h5 class="card-title">Academic Dev Flow</h5>
+                            <p class="card-text">
+                            Plataforma desenvolvida para auxiliar o acompanhamento de projetos
+                            de software acadêmicos, permitindo feedbacks e avaliações.
+                            </p>
+                        </div>
+
+                        <ul class="list-group list-group-flush border-0 h-100">
+                            <li class="list-group-item"><strong>Tecnologias:</strong></li>
+                            
+                            <li class="list-group-item">
+                                <img class="" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+                            </li>
+                            <li class="list-group-item">
+                                <img src="https://img.shields.io/badge/Django-174536?style=for-the-badge&logo=django&logoColor=white" />
+                            </li>
+                            <li class="list-group-item">
+                                <img src="https://img.shields.io/badge/PostgreSQL-00000F?style=for-the-badge&logo=postgresql&logoColor=white" />
+                            </li>
+                        </ul>
+                    
+                        <div class="card-body d-flex justify-content-end">
+                            <a class="icon-link text-info" target="_blank" href="https://github.com/joanmdrs/academic-dev-flow/">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="col-md-4 card-project">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./assets/project-2.png" class="card-img-top" alt="Sistema de Controle">
+                        <div class="card-body">
+                            <h5 class="card-title">Sistema de Controle Financeiro</h5>
+                            <p class="card-text">
+                            Aplicação web para organização de tarefas pessoais com
+                            autenticação JWT e interface intuitiva.
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush border-0">
+                            <li class="list-group-item"><strong>Tecnologias:</strong></li>
+                            
+                            <li class="list-group-item">
+                                <img class="" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+                            </li>
+                            <li class="list-group-item">
+                                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+                            </li>
+                            <li class="list-group-item">
+                                <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" />
+                            </li>
+                        </ul>
+                        <div class="card-body d-flex justify-content-end">
+                            <a class="icon-link text-info" target="_blank" href="https://github.com/joanmdrs/financial-control">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projeto 3 -->
+                <article class="col-md-4 card-project">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./assets/project-3.png" class="card-img-top" alt="Sistema de Agendamento de Consultas">
+                        <div class="card-body">
+                            <h5 class="card-title">Sistema de Agendamento de Consultas</h5>
+                            <p class="card-text">
+                            Site pessoal desenvolvido como vitrine profissional e espaço para
+                            compartilhar conhecimento em tecnologia.
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush border-0">
+                            <li class="list-group-item"><strong>Tecnologias:</strong></li>
+                            
+                            <li class="list-group-item">
+                                <img class="" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+                            </li>
+                            <li class="list-group-item">
+                                <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+                            </li>
+                            <li class="list-group-item">
+                                <img src="https://img.shields.io/badge/PostgreSQL-00000F?style=for-the-badge&logo=postgresql&logoColor=white" />
+                            </li>
+                            <li class="list-group-item">
+                                <img src="https://img.shields.io/badge/Prisma-8A2BE2?style=for-the-badge&logo=Prisma&logoColor=white" />
+                            </li>
+                        </ul>
+                        <div class="card-body d-flex justify-content-end">
+                            <a class="icon-link text-info" href="https://github.com/joanmdrs/sigcli" target="_blank">
+                                <i class="bi bi-github fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+
+        </div>
+    </section>
+
+    <section id="contato" class="container-md d-flex justify-content-center align-items-center py-5">
+        <div class="container d-flex flex-column align-items-center">
+            <h2 class="text-center mb-2">Entre em Contato</h2>
+            <h5 class="gradient-text mb-4">Vamos trabalhar juntos</h5>
+            <form id="formContato" class="p-4 border rounded shadow-sm w-100 w-md-75 w-lg-50" onsubmit="sendMessage(event)">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" required/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" required/>
+                </div>
+
+                <div class="mb-3">
+                    <label for="assunto" class="form-label">Assunto</label>
+                    <select class="form-select" id="assunto" required>
+                        <option value="">Selecione...</option>
+                        <option value="Freelance">Freelance</option>
+                        <option value="Emprego">Emprego</option>
+                        <option value="Colaboração">Colaboração</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea
+                        class="form-control"
+                        id="mensagem"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-info">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="container-fluid py-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+            <div class="mb-3 mb-md-0">
+                <h1 class="fw-bold">Vamos <br> Trabalhar Juntos</h1>
+            </div>
+
+            <div class="d-flex flex-column align-items-end gap-2">
+                <span class="badge rounded-pill px-3 py-2 text-bg-info d-flex align-items-center gap-2">
+                    <i class="bi bi-envelope-at fs-5"></i>
+                    joan.azevedo.medeiros@gmail.com
+                </span>
+
+                <span class="badge rounded-pill px-3 py-2 text-bg-info d-flex align-items-center gap-2">
+                    <i class="bi bi-telephone fs-5"></i>
+                    (84) 99145-8222
+                </span>
+
+                <span class="badge rounded-pill px-3 py-2 text-bg-info d-flex align-items-center gap-2">
+                    <i class="bi bi-pin-map fs-5"></i>
+                    Natal/RN
+                </span>
+            </div>
+
+        </div>
+
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center border-top border-secondary pt-3">
+            <p class="mb-2 mb-md-0">&copy; <span id="anoAtual"></span> Joan Medeiros — Todos os direitos reservados.</p>
+
+            <div>
+                <a href="https://www.linkedin.com" target="_blank" class="text-info me-3 fs-5">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="text-info me-3 fs-5">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-info fs-5">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"></script>
+
+</body>         

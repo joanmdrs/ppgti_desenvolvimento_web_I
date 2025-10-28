@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --destaque-color: #4FC3F7;
+  --gradient-text: linear-gradient(to right, #4FC3F7, #6E2BF2);
+  --bg-body: #F8F9FA;
+}
+
+[data-bs-theme="dark"] {
+  --gradient-text: linear-gradient(to right, #4FC3F7, #FFFFFF);
+  --bg-body: #212529;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-body);
+}
+
+header {
+  height: auto;
+}
+
+.gradient-text {
+  font-family: 'Oleo Script', cursive;
+  background: var(--gradient-text);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.container-header {
+  background-color: var(--bg-body);
+}
+
+.navbar-brand {
+  font-family: 'Oleo Script', cursive;
+  font-size: 32px !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Seção Home */
+.container-home {
+  height: 100vh;
+  gap: 10px;
+
+}
+
+.container-home img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.container-home h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.container-home h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container-home p {
+  max-width: 600px;
+  font-size: 18px;
+  
+}
+
+/* Seção Sobre mim */
+#sobre-mim {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;  
+}
+
+#sobre-mim h2 {
+  font-weight: 700;
+}
+
+#sobre-mim h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#sobre-mim p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+#sobre-mim img {
+  max-width: 300px;
+  border: 4px solid var(--destaque-color);
+}
+
+/* Seção Habilidades */
+#habilidades {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+#habilidades h2 {
+  font-weight: 700;
+}
+
+#habilidades h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.categoria {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.categoria:hover i {
+  color: #FFFFFF !important;
+}
+
+/* Seção Projetos */
+#projetos {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+#projetos h2 {
+  font-weight: 700;
+}
+
+#projetos h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#projetos .card-project {
+  transition: transform 0.3s ease;
+}
+
+#projetos .card-project:hover {
+  transform: scale(1.1);
+}
+
+/* Seção Contato */
+#contato {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+#contato h2 {
+  font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+
+  /* Seção HOME */
+  .container-home img {
+    width: 150px;
+  }
+
+  .container-home h1 {
+    font-size: 28px;
+  }
+
+  .container-home p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  /* Seção SOBRE */
+  #sobre-mim {
+    height: auto;
+    padding-top: 60px;
+  }
+
+  #sobre-mim article {
+    text-align: center;
+  }
+
+  /* Seção HABILIDADES */
+  #habilidades {
+    height: auto;
+    padding-top: 60px;
+  }
+
+  #habilidades-container {
+    justify-content: center;
+  }
+
+  /* Cards */
+  .categoria {
+    width: 100%;
+  }
+
+  /* Seção PROJETOS */
+  #projetos {
+    height: auto;
+    padding-top: 60px;
+  }
+
+  #projetos .card {
+    margin-bottom: 20px;
+  }
+
+  /* Seção CONTATO */
+  #contato {
+    height: auto;
+    padding-top: 60px;
+  }
+
+  #formContato {
+    width: 100% !important;
+  }
+
+  /* Rodapé */
+  footer h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  footer .badge {
+    font-size: 14px;
+  }
+
+  footer .d-flex.flex-md-row {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  #habilidades,
+  #projetos,
+  #sobre-mim,
+  #contato {
+    height: auto;
+  }
+
+  .container-home h1 {
+    font-size: 32px;
+  }
+
+  .container-home p {
+    font-size: 15px;
+  }
+}
