@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Games</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm p-4">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-light" href="#">
+                    🎮 Galeria de Games
+                </a>
+
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" 
+                    aria-expanded="false" 
+                    aria-label="Alternar navegação"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-house-door-fill me-1"></i> Início
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-grid-items">
+                                <i class="bi bi-controller me-1"></i> Catálogo
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                <i class="bi bi-envelope-fill me-1"></i> Contato
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+                            <button 
+                                id="button-add-item"
+                                class="btn btn-primary btn-sm"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal-form-add-item"
+                            >
+                                <i class="bi bi-plus-lg me-1"></i> Adicionar Jogo
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div id="section-hero-banner" class="d-flex justify-content-center align-items-center text-center p-4">
+            <div class="container">
+                <h1 class=" fw-bold">🎮 Minha Galeria de Jogos</h1>
+                <p class="text-light">Catálogo interativo com meus jogos favoritos!</p>
+                <button 
+                    id="button-add-item"
+                    class="btn btn-light btn-lg mt-3" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#modal-form-add-item"
+                >
+                Adicionar novo jogo
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-form-add-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Salvar Jogo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-add-item" class="p-2">
+                        <div class="mb-3">
+                            <label for="campo-titulo" class="form-label">Título</label>
+                            <input type="text" name="campo-titulo" class="form-control" id="campo-titulo" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="campo-descricao" class="form-label">Descrição</label>
+                            <textarea name="campo-descricao" class="form-control" id="campo-descricao" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="campo-imagem" class="form-label">Imagem (URL)</label>
+                            <input type="url" name="campo-imagem" class="form-control" id="campo-imagem" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="campo-categoria" class="form-label">Categoria</label>
+                            <input type="text" name="campo-categoria" class="form-control" id="campo-categoria">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="campo-plataforma" class="form-label">Plataforma</label>
+                            <input type="text" name="campo-plataforma" class="form-control" id="campo-plataforma">
+                        </div>
+
+                        <div class="mb-3"> 
+                            <label for="campo-perfil-jogo" class="form-label">Perfil</label>
+                            <input type="url" name="campo-perfil-jogo" class="form-control" id="campo-perfil-jogo">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+                    </form>
+                </div>
+                
+                </div>
+            </div>
+        </div>     
+
+        <div class="container my-4 p-4">
+            <div class="d-flex justify-content-end align-items-center">
+                <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownCategorias" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtrar por Categoria
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownCategorias" id="lista-categorias">
+                    <li><a class="dropdown-item active" href="#" data-categoria="todas">Todas</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="section-grid-items" class="container-fluid row gap-3 d-flex justify-content-center p-4">
+
+        </div>
+
+        <div class="spinner-border" role="status" id="spinner">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-light mt-5 p-4" id="footer">
+        <div class="container text-center">
+
+            <h5 class="fw-bold mb-2">🎮 Galeria de Games</h5>
+            <p class="mb-3 text-secondary">
+                Explore, avalie e gerencie seus jogos favoritos!
+            </p>
+
+            <div class="d-flex justify-content-center mb-3 gap-3">
+                <a href="#" class="text-light text-decoration-none">
+                    <i class="bi bi-house-door-fill me-1"></i> Início
+                </a>
+                <a href="#" class="text-light text-decoration-none">
+                    <i class="bi bi-collection me-1"></i> Catálogo
+                </a>
+                <a href="#" class="text-light text-decoration-none">
+                    <i class="bi bi-envelope-fill me-1"></i> Contato
+                </a>
+            </div>
+
+            <div class="mb-3">
+                <a href="#" class="text-light fs-5 me-3"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-light fs-5 me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light fs-5 me-3"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+            <small class="text-secondary">
+            © <span id="year"></span> Desenvolvido por <strong>Joan Medeiros</strong>.
+            Todos os direitos reservados.
+            </small>
+
+        </div>
+    </footer>
+
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1080">
+        <div id="main-toast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="main-toast-body">
+                    Mensagem do sistema.
+                </div>
+                <button 
+                    type="button" 
+                    class="btn-close btn-close-white me-2 m-auto" 
+                    data-bs-dismiss="toast" 
+                    aria-label="Fechar">
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script type="module" src="./js/main.js"></script>
+
+    
+</body>
+</html>

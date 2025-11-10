@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend", sans-serif;
+}
+
+#section-hero-banner {
+    width: 100%;
+    height: calc(100vh - 200px);
+    background-image: url("../assets/logo-secao-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#spinner {
+  position: fixed;           
+  top: 50%;                 
+  left: 50%;                
+  z-index: 1050;            
+  width: 4rem;
+  height: 4rem;
+  color: #0d6efd;           
+}
+
+#spinner::after {
+  content: "";              
+}
+
+#spinner::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+#section-grid-items {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+
+
+.item-card {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.item-card img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.item-card h3 {
+    width: fit-content;
+    font-size: 15px;
+}
+/* 
+.btn-edit,
+.btn-remove {   
+    width: fit-content;
+} */
+
+footer {
+  flex-shrink: 0;
+}
